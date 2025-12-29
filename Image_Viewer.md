@@ -1,1 +1,2 @@
-
+Image viewer in C using SDL3 library.
+It renders images in .ppm format (MaxWidth = 1920, MaxHeight = 1200)
