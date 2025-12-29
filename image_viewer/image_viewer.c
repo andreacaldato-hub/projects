@@ -8,10 +8,19 @@
 
 int main(int argv, char *argc[]) {
   char *file = argc[1];
-  printf("Rendering: %s\n", argc[1]);
+  if (argv != 2) {
+    printf("Usage: ./image_viewer <image_name> (for example: ./image_viewer "
+           "image_1.ppm)\n");
+    return 1;
+  }
   char path[256];
   sprintf(path, "/home/andrea/projects/image_viewer/%s", file);
   FILE *p = fopen(path, "rb");
+  if (p == NULL) {
+    printf("Invalid file name or type\n");
+    return 1;
+  }
+  printf("Rendering: %s\n", argc[1]);
   char format[3];
   int width, height, maxval;
   char line[256];
