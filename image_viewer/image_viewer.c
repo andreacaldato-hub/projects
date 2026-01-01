@@ -5,6 +5,7 @@
 #include <SDL3/SDL_timer.h>
 #include <SDL3/SDL_video.h>
 #include <stdio.h>
+void stampa(void) { printf("ciao come va"); }
 
 int main(int argv, char *argc[]) {
   char *file = argc[1];
@@ -30,6 +31,7 @@ int main(int argv, char *argc[]) {
 
   // Skip any leftover newline after format
   fgets(line, sizeof(line), p);
+  stampa();
 
   // Read comment line
   char *commento =
