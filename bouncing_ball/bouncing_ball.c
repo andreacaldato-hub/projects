@@ -7,8 +7,8 @@
 #include <SDL3/SDL_timer.h>
 #include <SDL3/SDL_video.h>
 #include <stdio.h>
-int v_x = 3;
-int v_y = 3;
+int v_x;
+int v_y;
 
 struct Circle {
   double x_center;
@@ -18,8 +18,13 @@ struct Circle {
 
 void draw_cicle(SDL_Renderer *renderer, struct Circle circle);
 void step(struct Circle *circle, SDL_Renderer *renderer);
-
 int main() {
+  int vy;
+  int vx;
+  printf("Choose the velocity (vy vx):\n");
+  scanf("%i %i", &vy, &vx);
+  v_x = vx;
+  v_y = vy;
 
   SDL_Init(SDL_INIT_VIDEO);
 
