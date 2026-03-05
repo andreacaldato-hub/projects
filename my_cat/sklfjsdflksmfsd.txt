@@ -1,0 +1,98 @@
+
+return {
+	"sainnhe/gruvbox-material",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		-- Configuration options (must be set before loading the colorscheme)
+		vim.g.gruvbox_material_background = "soft" -- 'soft', 'medium', 'hard'
+		vim.g.gruvbox_material_foreground = "mix" -- 'material', 'mix', 'original'
+		vim.g.gruvbox_material_better_performance = 1
+		vim.g.gruvbox_material_transparent_background = 1
+		-- Add this to your custom highlight function
+		vim.api.nvim_set_hl(0, "String", { fg = "#89b482", italic = true }) -- Gruvbox Aqua
+		vim.cmd.colorscheme("gruvbox-material")
+	end,
+	-- "tiagovla/tokyodark.nvim",
+	-- priority = 1000,
+	-- opts = {
+	-- 	transparent_background = true,
+	-- 	gamma = 1.0,
+	-- 	styles = {
+	-- 		comments = { italic = true },
+	-- 		keywords = { italic = true },
+	-- 		identifiers = { italic = true },
+	-- 		functions = { italic = true },
+	-- 		variables = { italic = true },
+	-- 	},
+	-- },
+	-- config = function(_, opts)
+	-- 	require("tokyodark").setup(opts)
+	-- 	vim.cmd([[colorscheme tokyodark]])
+	-- end,
+} -- version = "v0.1.0", -- Pin to legacy version
+-- priority = 1000,
+-- config = function()
+-- 	-- Lua
+-- 	require("onedark").setup({
+-- 		-- Main options --
+-- 		style = "darker", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+-- 		transparent = true, -- Show/hide background
+-- 		term_colors = true, -- Change terminal color as per the selected theme style
+-- 		ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+-- 		cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+--
+-- 		-- toggle theme style ---
+-- 		toggle_style_key = nil, -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+-- 		toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" }, -- List of styles to toggle between
+--
+-- 		-- Change code style ---
+-- 		-- Options are italic, bold, underline, none
+-- 		-- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
+-- 		code_style = {
+-- 			comments = "italic",
+-- 			keywords = "italic",
+-- 			functions = "italic",
+-- 			strings = "italic",
+-- 			variables = "italic",
+-- 		},
+--
+-- 		-- Lualine options --
+-- 		lualine = {
+-- 			transparent = true, -- lualine center bar transparency
+-- 		},
+--
+-- 		-- Custom Highlights --
+-- 		colors = {
+-- 			-- purple = "#E2EFDE",
+-- 			-- cyan = "#c0c0c0",
+-- 			-- orange = "#e8c88c",
+-- 			-- green = "#a3be8c",
+-- 		},
+-- 		-- All'interno di require("onedark").setup({ ...
+-- 		highlights = {
+-- 			-- Funzioni standard (es. printf) e globali
+-- 			-- ["@lsp.type.function"] = { fg = "$purple", fmt = "italic" },
+-- 			-- ["@lsp.typemod.function.defaultLibrary"] = { fg = "$purple", fmt = "italic" },
+-- 			-- ["@lsp.typemod.function.globalScope"] = { fg = "$purple", fmt = "italic" },
+-- 			--
+-- 			-- -- Modificatori (per essere sicuri che il colore "tenga")
+-- 			-- ["@lsp.mod.defaultLibrary"] = { fg = "$purple" },
+-- 			-- ["@lsp.mod.globalScope"] = { fg = "$purple" },
+-- 			--
+-- 			-- -- Manteniamo l'include rosso/purple come prima
+-- 			-- ["cInclude"] = { fg = "#94C5CC" },
+-- 			-- ["Repeat"] = { fg = "#94C5CC" },
+-- 			["Function"] = { fg = "#E2EFDE" },
+-- 			-- ["cPreProc"] = { fg = "#94C5CC" },
+-- 		},
+-- 		-- Plugins Config --
+-- 		diagnostics = {
+-- 			darker = true, -- darker colors for diagnostic
+-- 			undercurl = true, -- use undercurl instead of underline for diagnostics
+-- 			background = true, -- use background color for virtual text
+-- 		},
+-- 	})
+--
+-- 	require("onedark").load()
+-- end,
